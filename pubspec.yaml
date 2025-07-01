@@ -1,3 +1,4 @@
+name: validate_it
 description: A clean and reusable Flutter package for validating form fields.
 version: 0.0.1
 homepage: https://github.com/yourusername/validate_it
