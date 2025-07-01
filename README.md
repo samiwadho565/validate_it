@@ -1,20 +1,31 @@
 # validate_it
 
-A clean and reusable Flutter package for validating form fields with ease.
+A lightweight, fast and ready-to-use form validation package for Flutter. Includes commonly used validators with customizable messages.
 
 ## ✅ Features
 
-- Required field check
-- Email & phone number validation
-- Password strength (min-length)
-- Min / Max length
-- Confirm field match
-- Alphabets / Numbers only
-- Custom RegExp
+- Required field
+- Email
+- Phone number
+- Password
+- Min/Max length
+- Match other field
+- Only alphabets / numbers
+- Custom regex
 - Combine multiple validators
 
-## 📦 Installation
+## 🚀 Usage
 
-```yaml
-dependencies:
-  validate_it: ^0.0.1
+```dart
+import 'package:validate_it/validate_it.dart';
+
+TextFormField(
+  validator: FormValidators.required('Email'),
+)
+
+TextFormField(
+  validator: FormValidators.combine([
+    FormValidators.required('Password'),
+    FormValidators.password(minLength: 8),
+  ]),
+)
